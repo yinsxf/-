@@ -1,0 +1,6 @@
+# 项目依赖
+# 数据库连接驱动
+mysql-connector-python==8.0.33
+
+# GUI框架
+# tkinter通常是Python标准库的一部分，不需要额外安装
