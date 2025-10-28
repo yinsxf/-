@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- 标题 -->
+  <text x="400" y="30" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">电子商务系统实体关系图</text>
+  
+  <!-- 客户表 -->
+  <rect x="100" y="100" width="180" height="120" rx="5" ry="5" fill="white" stroke="black" stroke-width="2"/>
+  <text x="190" y="125" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">客户表 (customers)</text>
+  <text x="190" y="150" font-family="Arial" font-size="14" text-anchor="middle">customer_id (PK)</text>
+  <text x="190" y="175" font-family="Arial" font-size="14" text-anchor="middle">name</text>
+  <text x="190" y="200" font-family="Arial" font-size="14" text-anchor="middle">email</text>
+  <text x="190" y="225" font-family="Arial" font-size="14" text-anchor="middle">phone</text>
+  
+  <!-- 订单表 -->
+  <rect x="400" y="100" width="180" height="120" rx="5" ry="5" fill="white" stroke="black" stroke-width="2"/>
+  <text x="490" y="125" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">订单表 (orders)</text>
+  <text x="490" y="150" font-family="Arial" font-size="14" text-anchor="middle">order_id (PK)</text>
+  <text x="490" y="175" font-family="Arial" font-size="14" text-anchor="middle">customer_id (FK)</text>
+  <text x="490" y="200" font-family="Arial" font-size="14" text-anchor="middle">order_date</text>
+  <text x="490" y="225" font-family="Arial" font-size="14" text-anchor="middle">total_amount</text>
+  
+  <!-- 商品表 -->
+  <rect x="100" y="300" width="180" height="120" rx="5" ry="5" fill="white" stroke="black" stroke-width="2"/>
+  <text x="190" y="325" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">商品表 (products)</text>
+  <text x="190" y="350" font-family="Arial" font-size="14" text-anchor="middle">product_id (PK)</text>
+  <text x="190" y="375" font-family="Arial" font-size="14" text-anchor="middle">name</text>
+  <text x="190" y="400" font-family="Arial" font-size="14" text-anchor="middle">price</text>
+  <text x="190" y="425" font-family="Arial" font-size="14" text-anchor="middle">stock</text>
+  
+  <!-- 订单商品表 -->
+  <rect x="400" y="300" width="180" height="120" rx="5" ry="5" fill="white" stroke="black" stroke-width="2"/>
+  <text x="490" y="325" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">订单商品表 (order_items)</text>
+  <text x="490" y="350" font-family="Arial" font-size="14" text-anchor="middle">order_item_id (PK)</text>
+  <text x="490" y="375" font-family="Arial" font-size="14" text-anchor="middle">order_id (FK)</text>
+  <text x="490" y="400" font-family="Arial" font-size="14" text-anchor="middle">product_id (FK)</text>
+  <text x="490" y="425" font-family="Arial" font-size="14" text-anchor="middle">quantity</text>
+  
+  <!-- 关系线 -->
+  <!-- 客户到订单 (1:N) -->
+  <path d="M280 160 L400 160" fill="none" stroke="black" stroke-width="2"/>
+  <polygon points="400,160 390,155 390,165" fill="black"/>
+  <path d="M395 155 L395 165 M390 160 L400 160" fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- 订单到订单商品 (1:N) -->
+  <path d="M490 220 L490 300" fill="none" stroke="black" stroke-width="2"/>
+  <polygon points="490,300 485,290 495,290" fill="black"/>
+  <path d="M485 295 L495 295 M490 290 L490 300" fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- 商品到订单商品 (1:N) -->
+  <path d="M280 360 L400 360" fill="none" stroke="black" stroke-width="2"/>
+  <polygon points="400,360 390,355 390,365" fill="black"/>
+  <path d="M395 355 L395 365 M390 360 L400 360" fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- 关系说明 -->
+  <text x="340" y="140" font-family="Arial" font-size="12" text-anchor="middle">1:N</text>
+  <text x="505" y="260" font-family="Arial" font-size="12" text-anchor="middle">1:N</text>
+  <text x="340" y="340" font-family="Arial" font-size="12" text-anchor="middle">1:N</text>
+  
+  <!-- 图例 -->
+  <rect x="620" y="100" width="150" height="120" rx="5" ry="5" fill="white" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="695" y="120" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">图例</text>
+  <rect x="640" y="140" width="20" height="10" rx="2" ry="2" fill="white" stroke="black" stroke-width="2"/>
+  <text x="715" y="150" font-family="Arial" font-size="12" text-anchor="start">实体</text>
+  <path d="M640,170 L660,170" fill="none" stroke="black" stroke-width="2"/>
+  <polygon points="660,170 650,165 650,175" fill="black"/>
+  <text x="715" y="180" font-family="Arial" font-size="12" text-anchor="start">关系</text>
+  <text x="640" y="205" font-family="Arial" font-size="12" text-anchor="start">PK: 主键</text>
+  <text x="640" y="225" font-family="Arial" font-size="12" text-anchor="start">FK: 外键</text>
+</svg>

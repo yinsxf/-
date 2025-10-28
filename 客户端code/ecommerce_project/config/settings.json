@@ -1,0 +1,32 @@
+{
+    "app": {
+        "title": "电子商务管理系统",
+        "version": "1.0.0",
+        "debug": true
+    },
+    "window": {
+        "width": 1024,
+        "height": 768,
+        "min_width": 800,
+        "min_height": 600,
+        "maximized": false
+    },
+    "database": {
+        "connection_pool_size": 10,
+        "connect_timeout": 30
+    },
+    "gui": {
+        "theme": "default",
+        "font": {
+            "family": "SimHei",
+            "size": 10
+        },
+        "table_row_height": 30
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/app.log",
+        "max_bytes": 10485760,
+        "backup_count": 5
+    }
+}
